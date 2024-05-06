@@ -1,6 +1,16 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
+    padding: 0;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     background: #2864FF;
     color: white;
 }
@@ -8,15 +18,13 @@ body {
 h1 {
     font-family: 'Bebas Neue';
     font-size: 30rem;
-    text-align: center;
     opacity: 0.1;
-    margin: 18% 0 0 0;
 }
 
 .progress {
     background-color: #A1BCFF;
     height: 3px;
     width: 0;
-    position: absolute;
     top: 50%;
+    position: absolute;
 }
