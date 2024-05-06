@@ -11,10 +11,11 @@ body {
     border-radius: 50%;
     background: #CE5700;
     width: 16vw;
-    height: 16vw;
+    height: 16vh;
     display: grid;
     place-content: center;
     cursor: pointer;
+    padding: 3em;
 }
 
 p {
