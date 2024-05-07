@@ -15,14 +15,44 @@
 <body>
     <img src="ball.svg" alt="Basketball vector graphic">
 
-    <div class="mask"><h1>welcome.</h1></div>
+    <div class="mask" style="overflow: hidden;"><h1>welcome.</h1></div>
 
     <div class="loader"></div>
 
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        const ball = document.querySelector("img");
+        const h1 = document.querySelector("h1");
+        const loader = document.querySelector(".loader");
 
+        gsap.set(h1, {
+            y: 100,
+        });
+
+        gsap.set(loader, {
+            width: 0,
+        })
+
+        gsap.from(ball, {
+            top: -ball.offsetHeight / 2,
+            duration: 2,
+            ease: "elastic.out(1,0.3)",
+            onComplete: animateh1AndLoader
+        });
+
+        function animateh1AndLoader() {
+            gsap.to(h1, {
+                y: 0,
+                ease: "power4.out",
+                duration: 1,
+            });
+            gsap.to(loader, {
+                width: "100%",
+                ease: "power4.out",
+                duration: 1,
+            })
+        }
     </script>
 </body>
 </html>
