@@ -27,7 +27,7 @@ h1 {
 .mask {
   overflow: hidden;
   height: 38px;
-  transform: translateY(-150px);
+  transform: translateY(-175px);
 }
 
 .loader {
